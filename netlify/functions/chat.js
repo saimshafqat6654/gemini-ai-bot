@@ -24,20 +24,27 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Call the official Google Gemini 1.5 Flash Model
+    // Initialize the modern client
     const ai = new GoogleGenAI({ apiKey });
-    const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const result = await model.generateContent(message);
-    const responseData = await result.response.text();
+    
+    // Correct method structure for the modern @google/genai SDK
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash", 
+      contents: message,
+    });
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ reply: responseData }),
+      headers: { 
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*" 
+      },
+      body: JSON.stringify({ reply: response.text }),
     };
   } catch (error) {
     return {
       statusCode: 500,
+      headers: { "Access-Control-Allow-Origin": "*" },
       body: JSON.stringify({ error: error.message }),
     };
   }
