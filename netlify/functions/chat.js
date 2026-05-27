@@ -1,4 +1,4 @@
-const { GoogleGenAI } = require("@google/generative-ai");
+const { GoogleGenAI } = require("@google/genai");
 
 exports.handler = async (event, context) => {
   // Always permit safe pre-flight options routing
