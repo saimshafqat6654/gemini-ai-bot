@@ -4,6 +4,6 @@
   "description": "Serverless Node.js Gemini Chatbot",
   "main": "index.html",
   "dependencies": {
-    "@google/genai": "^0.1.4"
+    "@google/genai": "*"
   }
 }
