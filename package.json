@@ -1,0 +1,9 @@
+{
+  "name": "gemini-netlify-chatbot",
+  "version": "1.0.0",
+  "description": "Serverless Node.js Gemini Chatbot",
+  "main": "index.html",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.0"
+  }
+}
