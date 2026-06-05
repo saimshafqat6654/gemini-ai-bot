@@ -3,7 +3,7 @@
 A responsive, web-based chatbot application built using HTML, CSS, and JavaScript. This project integrates an AI language model API while securely handling sensitive credentials using cloud-based serverless functions to prevent exposing the API key on the client side.
 
 ## 🚀 Live Demo
-* **Netlify Deployment URL:** [Insert your Netlify live link here]
+* **Netlify Deployment URL:https://6a177629f2e8f5637c528c94--ai-bot112.netlify.app
 
 ## ✨ Features
 * **Real-time AI Chat:** Interactive UI allowing users to send messages and receive intelligent responses from the AI.
